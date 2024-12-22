@@ -6,7 +6,6 @@ This is a learning project, implementing an app where users can create lists of 
 
 - Test-driven development (TDD)
 - Unit tests with vitest
-- E2E tests (framework not yet decided)
 - Redux
 
 ## Development environment
