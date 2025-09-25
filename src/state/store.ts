@@ -1,5 +1,6 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import { ToDoItemProps } from "../components/ToDoItem";
+import { thunk } from "redux-thunk";
 
 export type State = {
   items: ToDoItemProps[];
@@ -100,4 +101,8 @@ export const toDoListReducer = (
   }
 };
 
-export const store = createStore(toDoListReducer, defaultState);
+export const store = createStore(
+  toDoListReducer,
+  defaultState,
+  applyMiddleware(thunk)
+);
